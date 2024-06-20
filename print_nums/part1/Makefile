@@ -10,9 +10,11 @@ prime.o: prime.c prime.h
 gcd.o: gcd.c gcd.h
 	gcc -c -g -Wall gcd.c -o gcd.o
 
-.PHONY: clean
+.PHONY: 
 clean: 
 	rm -f *.exe *.o *~ 
+clean_all: 
+	rm -f *.exe *.o *~ main
 .PHONY:
 run:
 	./main
