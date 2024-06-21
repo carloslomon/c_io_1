@@ -50,7 +50,7 @@ int *malloc_arr(int n){
 
 void sort_integer_array(int *start, int *end, int isAscending){
     int len = (int)(end - start + 1);
-    printf("\nlength: %d\n", len);
+    //printf("\nlength: %d\n", len);
     qsort(start, len, sizeof(int), ((int(*)(const void *, const void *))(isAscending ? comparator_asc:comparator_desc)));
 }
 

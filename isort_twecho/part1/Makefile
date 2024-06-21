@@ -1,13 +1,15 @@
-CC = gcc
-CFLAGS = -g -Wall 
-LDFLAGS = -g 
-isort:
+
+# Default target
+isort: 
 
 .PHONY: clean
-	clean: 
-		rm -rf *.o a.out core main
-.PHONY: 
-	run: 
-		./isort
-	run_valgrind:
-		valgrind ./isort
+clean:
+	rm -rf *.o isort core
+
+.PHONY: run
+run: 
+	./isort
+
+.PHONY: run_valgrind
+run_valgrind: 
+	valgrind ./isort
